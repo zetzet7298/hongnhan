@@ -1,6 +1,6 @@
 <x-base-layout>
     @section('title')
-        <title>Dịch Vụ Tư Vấn Pháp Luật | {{ $companyNameValue }}</title>
+        <title>Du Lịch Bình Hưng Với Hồng Nhàn | {{ $companyNameValue }}</title>
     @endsection
     @php
         $settings = \App\Models\Setting::getByType('service');
@@ -24,7 +24,11 @@
         $giatri_item_3_val = $settings['giatri_item_3_val']['value'];
         $giatri_item_4_val = $settings['giatri_item_4_val']['value'];
 
+        $seoMeta = \App\Models\Seo::where('canonical', route('dichvu'))->first();
     @endphp
+    @section('meta')
+        @include('pages.page_meta', ['seoMeta' => $seoMeta])
+    @endsection
     <div class="overflow-x-hidden">
         <div class="hero">
             <h1 class="d-none">{{ $h1 }}</h1>
@@ -48,8 +52,8 @@
                                     src="{{ display_image($banner_mobile) }}" alt="banner"></noscript>
                         </div>
                         <div class="design-banner-info">
-                            <h1 class="design-banner-title">{{ $title }}</h1>
-                            <h2 class="design-banner-description">{{ $description }}</h2>
+                            <h2 class="design-banner-title">{{ $title }}</h2>
+                            <h3 class="design-banner-description">{{ $description }}</h3>
                         </div>
                     </div>
                 </div>
@@ -78,7 +82,7 @@
                             <h2 class="text-3xl uppercase my-4 relative">{{ $item->title }}</h2>
                             <h3 class="relative">{!! $item->summary !!}</h3>
                             <div class="absolute left-8 bottom-8 flex mt-4">
-                                <a href="{{ route('tintuc.detail', ['slug' => $item->slug]) }}"
+                                <a href="{{ route('tintuc.detail', ['slug' => $item->slug . '.html']) }}"
                                     class="hbtn"><span>Xem chi
                                         tiết</span></a>
                             </div>
@@ -87,9 +91,11 @@
                 @endforeach
 
             </div>
-            <ul class="pagination">
-                {{ $items->links('vendor.pagination.custom') }}
-            </ul>
+            @if ($items->total() > 10)
+                <ul class="pagination">
+                    {{ $items->links('vendor.pagination.custom') }}
+                </ul>
+            @endif
         </div>
 
         <div class="team-box-2">
@@ -158,7 +164,10 @@
                         {{ $nangtam_title }}
                     </h2>
                     <div class="d-flex">
-                        <a href="#" data-fancybox data-src="#contact-modal" class="hbtn hbtn--white">Liên hệ ngay</a>
+                        {{-- <a target="_blank" rel="nofollow noopener" href="{{ $ZALO }}"
+                            class="hbtn hbtn--white">Liên hệ ngay</a> --}}
+                            <a href="{{ route('lienhe') }}" class="hbtn hbtn--white"><span>Liên hệ ngay</span></a>
+                        {{-- <a href="#" data-fancybox data-src="#contact-modal" class="hbtn hbtn--white">Liên hệ ngay</a> --}}
                     </div>
                 </div>
                 <div id="contact-modal" class="h-fancybox">

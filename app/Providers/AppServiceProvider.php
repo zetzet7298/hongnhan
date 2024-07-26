@@ -50,11 +50,12 @@ class AppServiceProvider extends ServiceProvider
         $INSTAGRAM = $settings['instagram']['value'];
         $LINKEDIN = $settings['linkedin']['value'];
         $TIKTOK = $settings['tiktok']['value'];
-        $VANPHONG = $settings['vanphong']['value'];
-        $DIACHIVANPHONG = $settings['diachivanphong']['value'];
-        $EMAILVANPHONG = $settings['emailvanphong']['value'];
-        $TGHDVANPHONG = $settings['tghdvanphong']['value'];
+        // $VANPHONG = $settings['vanphong']['value'];
+        // $DIACHIVANPHONG = $settings['diachivanphong']['value'];
+        // $EMAILVANPHONG = $settings['emailvanphong']['value'];
+        // $TGHDVANPHONG = $settings['tghdvanphong']['value'];
         $bocongthuong_link = $settings['bocongthuong_link']['value'];
+        $loadingText = $settings['loading-text']['value'];
 
         $DKKD = $settings[config('constants.DKKD')]['value'];
         $TIME_WORKING = $settings[config('constants.TIME_WORKING')]['value'];
@@ -87,12 +88,13 @@ class AppServiceProvider extends ServiceProvider
         View::share('LOGO', $LOGO);
         View::share('PRICE_QUOTE', $PRICE_QUOTE);
         View::share('GOOGLE_MAP', $GOOGLE_MAP);
-        View::share('VANPHONG', $VANPHONG);
-        View::share('DIACHIVANPHONG', $DIACHIVANPHONG);
-        View::share('EMAILVANPHONG', $EMAILVANPHONG);
-        View::share('TGHDVANPHONG', $TGHDVANPHONG);
+        // View::share('VANPHONG', $VANPHONG);
+        // View::share('DIACHIVANPHONG', $DIACHIVANPHONG);
+        // View::share('EMAILVANPHONG', $EMAILVANPHONG);
+        // View::share('TGHDVANPHONG', $TGHDVANPHONG);
         View::share('offices', $offices);
         View::share('bocongthuong_link', $bocongthuong_link);
+        View::share('loadingText', $loadingText);
 
         // Set demo globally
         $theme->setDemo(request()->input('demo', 'demo1'));

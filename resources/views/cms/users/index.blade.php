@@ -1,6 +1,6 @@
 @extends('cms.layouts.master')
 
-@section('title', 'CMS Dịch vụ tư vấn pháp luật')
+@section('title', 'CMS Du Lịch Bình Hưng Với Hồng Nhàn')
 
 @section('content')
     <!--begin::Col-->
@@ -51,7 +51,7 @@
                                             </div>
                                         </div>
                                     </td>
-                                  
+
 
                                     <td>
                                         <div class="d-flex align-items-center">
@@ -73,7 +73,7 @@
                                         <div class="d-flex align-items-center">
                                             <div class="d-flex justify-content-start flex-column">
                                                 <a href="#"
-                                                    class="text-dark fw-bolder text-hover-primary fs-6">{{ $row->is_enable_2fa == true? 'Đã bật' : 'Chưa bật' }}</a>
+                                                    class="text-dark fw-bolder text-hover-primary fs-6">{{ $row->is_enable_2fa == true ? 'Đã bật' : 'Chưa bật' }}</a>
                                             </div>
                                         </div>
                                     </td>
@@ -82,10 +82,9 @@
                                             @csrf
                                             @method('DELETE')
                                             <a target="_blank" href="{{ route('users.permissions', $row->id) }}"
-                                                class="action-icon"> <i
-                                                    class=" ri-admin-line"></i>
-                                                
-                                                </a>
+                                                class="action-icon"> <i class=" ri-admin-line"></i>
+
+                                            </a>
                                             <a href="{{ route('users.edit', ['user' => $row->id]) }}"
                                                 href="javascript:void(0);" class="action-icon"> <i
                                                     class="mdi mdi-square-edit-outline"></i></a>

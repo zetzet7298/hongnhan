@@ -1,6 +1,6 @@
 @extends('cms.layouts.master')
 
-@section('title', 'CMS Dịch vụ tư vấn pháp luật')
+@section('title', 'CMS Du Lịch Bình Hưng Với Hồng Nhàn')
 
 @section('content')
     <div class="container mt-2">
@@ -50,13 +50,14 @@
                                 </div>
                             </div>
                             <div class="mb-2">
-                            <label for="example-gridsize" class="form-label">Email</label>
-                            <div class="row">
-                                <div class="col-sm-4">
-                                    <input name="email" value="{{ $user->email }}" type="text" id="example-gridsize" class="form-control" placeholder="">
+                                <label for="example-gridsize" class="form-label">Email</label>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <input name="email" value="{{ $user->email }}" type="text"
+                                            id="example-gridsize" class="form-control" placeholder="">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                             {{-- <div class="mb-2">
                                 <label for="example-gridsize" class="form-label">Phone</label>
                                 <div class="row">

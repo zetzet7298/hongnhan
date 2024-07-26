@@ -106,7 +106,7 @@ if (!function_exists('upload_image2')) {
     function upload_image2(
         $folder = 'images',
         $key = 'avatar',
-        $validation = 'image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048|sometimes'
+        $validation = 'image|mimes:jpeg,png,jpg,gif,svg,webp|max:12048|sometimes'
     ) {
         request()->validate([$key => $validation]);
 
@@ -144,7 +144,7 @@ if (!function_exists('upload_image3')) {
         $name,
         $folder = 'images',
         $key = 'avatar',
-        $validation = 'image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048|sometimes'
+        $validation = 'image|mimes:jpeg,png,jpg,gif,svg,webp|max:12048|sometimes'
     ) {
         request()->validate([$key => $validation]);
 
@@ -201,7 +201,7 @@ if (!function_exists('upload_video')) {
     }
 }
 // if (!function_exists('upload_image2')) {
-//     function upload_image2($folder = 'images', $key = 'avatar', $validation = 'image|mimes:jpeg,png,jpg,gif,svg|max:2048|sometimes')
+//     function upload_image2($folder = 'images', $key = 'avatar', $validation = 'image|mimes:jpeg,png,jpg,gif,svg|max:12048|sometimes')
 //     {
 //         request()->validate([$key => $validation]);
 

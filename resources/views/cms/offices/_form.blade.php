@@ -1,6 +1,6 @@
 @extends('cms.layouts.master')
 
-@section('title', 'CMS Dịch vụ tư vấn pháp luật')
+@section('title', 'CMS Du Lịch Bình Hưng Với Hồng Nhàn')
 
 @section('content')
     <div class="content flex-row-fluid" id="kt_content">
@@ -36,8 +36,7 @@
 
                             <!--begin::Col-->
                             <div class="col-lg-12 fv-row">
-                                <textarea  rows="2" type="text" name="address" class="form-control mycustom" placeholder=""
-                                    value="">{{ isset($item) ? $item->address : '' }}</textarea>
+                                <textarea rows="2" type="text" name="address" class="form-control mycustom" placeholder="" value="">{{ isset($item) ? $item->address : '' }}</textarea>
                             </div>
                             <!--end::Col-->
                         </div>
@@ -50,7 +49,7 @@
 
                             <!--begin::Col-->
                             <div class="col-lg-12 fv-row">
-                                <input  rows="1" type="text" name="phone" class="form-control mycustom"
+                                <input rows="1" type="text" name="phone" class="form-control mycustom"
                                     placeholder="" value={{ isset($item) ? $item->phone : '' }}>
                             </div>
                             <!--end::Col-->
@@ -64,8 +63,7 @@
 
                             <!--begin::Col-->
                             <div class="col-lg-12 fv-row">
-                                <textarea  rows="1" type="text" name="email" class="form-control mycustom" placeholder=""
-                                    value="">{{ isset($item) ? $item->email : '' }}</textarea>
+                                <textarea rows="1" type="text" name="email" class="form-control mycustom" placeholder="" value="">{{ isset($item) ? $item->email : '' }}</textarea>
                             </div>
                             <!--end::Col-->
                         </div>
@@ -78,8 +76,7 @@
 
                             <!--begin::Col-->
                             <div class="col-lg-12 fv-row">
-                                <textarea  rows="2" type="text" name="time_working" class="form-control mycustom" placeholder=""
-                                    value="">{{ isset($item) ? $item->time_working : '' }}</textarea>
+                                <textarea rows="2" type="text" name="time_working" class="form-control mycustom" placeholder="" value="">{{ isset($item) ? $item->time_working : '' }}</textarea>
                             </div>
                             <!--end::Col-->
                         </div>
@@ -92,8 +89,7 @@
 
                             <!--begin::Col-->
                             <div class="col-lg-12 fv-row">
-                                <textarea  rows="3" type="text" name="google_map" class="form-control mycustom" placeholder=""
-                                    value="">{{ isset($item) ? $item->google_map : '' }}</textarea>
+                                <textarea rows="3" type="text" name="google_map" class="form-control mycustom" placeholder="" value="">{{ isset($item) ? $item->google_map : '' }}</textarea>
                             </div>
                             <!--end::Col-->
                         </div>
@@ -107,14 +103,15 @@
                             <!--begin::Col-->
                             <div class="col-lg-12 fv-row">
                                 <div class="form-check mb-2">
-                                    <input name="is_primary" type="checkbox" class="form-check-input" id="customCheckcolor1" @if(isset($item) ? $item->is_primary == true : '')checked @endif>
+                                    <input name="is_primary" type="checkbox" class="form-check-input" id="customCheckcolor1"
+                                        @if (isset($item) ? $item->is_primary == true : '') checked @endif>
                                     <label class="form-check-label" for="customCheckcolor1">Là trụ sở chính</label>
                                 </div>
                             </div>
                             <!--end::Col-->
                         </div>
                         <!--end::Input group-->
-                        
+
 
                     </div>
                     <!--end::Card body-->

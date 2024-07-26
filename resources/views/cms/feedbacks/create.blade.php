@@ -1,6 +1,6 @@
 @extends('cms.layouts.master')
 
-@section('title', 'CMS Dịch vụ tư vấn pháp luật')
+@section('title', 'CMS Du Lịch Bình Hưng Với Hồng Nhàn')
 
 @section('content')
     <div class="content flex-row-fluid" id="kt_content">
@@ -183,7 +183,8 @@
                                     <!--begin::Remove-->
                                     <span
                                         class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
-                                        data-kt-image-input-action="remove" data-bs-toggle="tooltip" title="Remove avatar">
+                                        data-kt-image-input-action="remove" data-bs-toggle="tooltip"
+                                        title="Remove avatar">
                                         <i class="bi bi-x fs-2"></i>
                                     </span>
                                     <!--end::Remove-->

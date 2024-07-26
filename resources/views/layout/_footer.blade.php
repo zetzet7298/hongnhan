@@ -6,7 +6,7 @@
         });
     </script>
 @endif
-<div class="footer">
+<div class="footer chitiet-footer">
     <div class="center-layout pd0__mobile_layout">
         <div class="footer__grid">
             <div class="footer__col">
@@ -28,8 +28,8 @@
                     </div>
                 </div> --}}
                 <div class="footer__title mt-3">
-                    <a class="footer__logo  himg" href="{{route('trangchu')}}" rel="nofollow">
-                        <img width="180" style="margin-left:5px;height:27.23px;" src="{{ display_image($LOGO) }}"
+                    <a class="footer__logo  himg" href="{{ route('trangchu') }}" rel="nofollow">
+                        <img width="240" style="margin-left:5px;height:46px;" src="{{ display_image($LOGO) }}"
                             alt="" data-lazy-src="{{ display_image($LOGO) }}">
                     </a>
                     <span class="footer-xemthem-btn" data-id="10">
@@ -123,54 +123,14 @@
                     <div class="footer__title">Gửi yêu cầu báo giá</div>
                     <p class="mb-4">{{ $PRICE_QUOTE }}</p>
                     <div class="quote-form-footer">
-
                         <div class="wpcf7 no-js" id="wpcf7-f5200-p264-o2" lang="en-US" dir="ltr">
                             <div class="screen-reader-response">
                                 <p role="status" aria-live="polite" aria-atomic="true"></p>
                                 <ul></ul>
                             </div>
-                            <form id="footer-form" action="{{ route('contact.fe.store') }}" method="post"
-                                class="wpcf7-form init" aria-label="Contact form" novalidate="novalidate"
-                                data-status="init">
-                                @csrf
-                                <p><span class="wpcf7-form-control-wrap" data-name="your-name"><input size="40"
-                                            required class="wpcf7-form-control wpcf7-text " aria-required="true"
-                                            aria-invalid="false" placeholder="Họ tên" value="" type="text"
-                                            name="fullname" />
-                                        @if ($errors->has('fullname'))
-                                            <span class="text-danger">{{ $errors->first('fullname') }}</span>
-                                        @endif
-                                    </span><span class="wpcf7-form-control-wrap" data-name="your-email"><input
-                                            size="40" required
-                                            class="wpcf7-form-control wpcf7-email  wpcf7-text wpcf7-validates-as-email"
-                                            aria-required="true" aria-invalid="false" placeholder="Email" value=""
-                                            type="email" name="email" />
-                                        @if ($errors->has('email'))
-                                            <span class="text-danger">{{ $errors->first('email') }}</span>
-                                        @endif
-                                    </span><span class="wpcf7-form-control-wrap" data-name="your-phone"><input required
-                                            class="wpcf7-form-control wpcf7-number  wpcf7-validates-as-number check-phone"
-                                            aria-required="true" aria-invalid="false" placeholder="Số điện thoại"
-                                            value="" type="number" name="phone" />
-                                        @if ($errors->has('phone'))
-                                            <span class="text-danger">{{ $errors->first('phone') }}</span>
-                                        @endif
-                                    </span>
-                                    <span class="wpcf7-form-control-wrap" data-name="menu-63">
-                                    </span><span class="wpcf7-form-control-wrap" data-name="message">
-                                        <textarea cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false"
-                                            placeholder="Nội dung tin nhắn" name="message"></textarea>
-                                    </span><input
-                                        class="wpcf7-form-control wpcf7-submit has-spinner hbtn submit-baogia-ftm"
-                                        type="submit" value="Gửi" />
-                                </p>
-                                <p style="display: none !important;"><label>&#916;
-                                        <textarea name="_wpcf7_ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea>
-                                    </label><input type="hidden" id="ak_js_2" name="_wpcf7_ak_js"
-                                        value="45" />
-                                </p>
-                                <div class="wpcf7-response-output" aria-hidden="true"></div>
-                            </form>
+                            <a class="wpcf7-form-control wpcf7-submit has-spinner hbtn submit-baogia-ftm"
+                                target="_blank" rel="nofollow noopener" href="{{ $ZALO }}"><span>Gửi
+                                    ngay</span></a>
                         </div>
                     </div>
                 </div>
@@ -189,71 +149,24 @@
                         <div class="footer-mobile-hidden--content">
                             <p class="mb-4">{{ $PRICE_QUOTE }}</p>
                             <div class="quote-form-footer">
-
-                                <div class="wpcf7 no-js" id="wpcf7-f1029-p264-o3" lang="en-US" dir="ltr">
+                                <div class="wpcf7 no-js" id="wpcf7-f5200-p264-o2" lang="en-US" dir="ltr">
                                     <div class="screen-reader-response">
                                         <p role="status" aria-live="polite" aria-atomic="true"></p>
                                         <ul></ul>
                                     </div>
-                                    <form id="footer-form" action="{{ route('contact.fe.store') }}" method="post"
-                                        class="wpcf7-form init" aria-label="Contact form" novalidate="novalidate"
-                                        data-status="init">
-                                        @csrf
-                                        <p><span class="wpcf7-form-control-wrap" data-name="your-name"><input
-                                                    size="40" required class="wpcf7-form-control wpcf7-text "
-                                                    aria-required="true" aria-invalid="false" placeholder="Họ tên"
-                                                    value="" type="text" name="fullname" />
-                                                @if ($errors->has('fullname'))
-                                                    <span class="text-danger">{{ $errors->first('fullname') }}</span>
-                                                @endif
-                                            </span><span class="wpcf7-form-control-wrap" data-name="your-email"><input
-                                                    size="40" required
-                                                    class="wpcf7-form-control wpcf7-email  wpcf7-text wpcf7-validates-as-email"
-                                                    aria-required="true" aria-invalid="false" placeholder="Email"
-                                                    value="" type="email" name="email" />
-                                                @if ($errors->has('email'))
-                                                    <span class="text-danger">{{ $errors->first('email') }}</span>
-                                                @endif
-                                            </span><span class="wpcf7-form-control-wrap" data-name="your-phone"><input
-                                                    required
-                                                    class="wpcf7-form-control wpcf7-number  wpcf7-validates-as-number check-phone"
-                                                    aria-required="true" aria-invalid="false"
-                                                    placeholder="Số điện thoại" value="" type="number"
-                                                    name="phone" />
-                                                @if ($errors->has('phone'))
-                                                    <span class="text-danger">{{ $errors->first('phone') }}</span>
-                                                @endif
-                                            </span><span class="wpcf7-form-control-wrap" data-name="menu-63">
-                                            </span><span class="wpcf7-form-control-wrap" data-name="message">
-                                                <textarea cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false"
-                                                    placeholder="Nội dung tin nhắn" name="message"></textarea>
-                                            </span><input
-                                                class="wpcf7-form-control wpcf7-submit has-spinner hbtn submit-baogia-ftm"
-                                                type="submit" value="Gửi" />
-                                        </p>
-                                        <p style="display: none !important;"><label>&#916;
-                                                <textarea name="_wpcf7_ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea>
-                                            </label><input type="hidden" id="ak_js_2" name="_wpcf7_ak_js"
-                                                value="45" />
-                                        </p>
-                                        <div class="wpcf7-response-output" aria-hidden="true"></div>
-                                    </form>
+                                    <a class="wpcf7-form-control wpcf7-submit has-spinner hbtn submit-baogia-ftm"
+                                        target="_blank" rel="nofollow noopener" href="{{ $ZALO }}"><span>Gửi
+                                            ngay</span></a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="footer-view-mobile">
+                    <div class="footer-view-mobile" style="">
                         <div class="footer__title mt-3">Kết nối với chúng tôi
-                            <span class="footer-xemthem-btn" data-id="3"><svg version="1.1" id="Layer_1"
-                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                    x="0px" y="0px" viewBox="0 0 330 330" style="enable-background:new 0 0 330 330;"
-                                    xml:space="preserve">
-                                    <path id="XMLID_225_"
-                                        d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393 c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393 s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z">
-                                    </path>
-                                </svg></span>
+
+
                         </div>
-                        <div class="footer-mobile-hidden" id="footer-mobile-hidden-3" style="height: 0px;">
+                        <div class="" id="" style="">
                             <div class="footer-mobile-hidden--content">
                                 <div class="d-flex flex-wrap">
                                     @if ($FACEBOOK)
@@ -316,33 +229,39 @@
                                     @endif
                                 </div>
                                 <div class="footer__col ">
-                                    @if ($bocongthuong_link)
-                                    <div class="d-flex align-items-center mt-4 box-cert">
-                                        <a href="{{$bocongthuong_link}}"
-                                            class="himg mr-4 cert-img" target="_blank" rel="nofollow noopener">
-                                            <img width="132" height="50"
-                                                src="{{ asset('image/bocongthuong.webp') }}"
-                                                data-lazy-srcset="{{ asset('image/bocongthuong.webp') }} 576w, {{ asset('image/bocongthuong.webp') }} 992w, {{ asset('image/bocongthuong.webp') }} 1440w"
-                                                alt="Bộ công thương"
-                                                data-lazy-src="{{ asset('image/bocongthuong.webp') }}"
-                                                data-ll-status="loaded" class="entered lazyloaded"
-                                                srcset="{{ asset('image/bocongthuong.webp') }} 576w, {{ asset('image/bocongthuong.webp') }} 992w, {{ asset('image/bocongthuong.webp') }} 1440w"><noscript><img
-                                                    width="132" height="50"
-                                                    src="{{ asset('image/bocongthuong.webp') }}"
-                                                    srcset="{{ asset('image/bocongthuong.webp') }} 576w, {{ asset('image/bocongthuong.webp') }} 992w, {{ asset('image/bocongthuong.webp') }} 1440w"
-                                                    alt="Bộ công thương"></noscript>
-                                        </a>
-                                    </div>
-                                    @endif
-                                 
-                                    <div class="payment text-start mt-3">
+                                    {{-- <div class="payment text-start mt-10" style="margin-top:10px;">
                                         <b>Chấp nhận thanh toán</b>
                                         <div class="d-flex flex-wrap ">
-                                            <img src="{{asset('image/visa.png')}}" alt="visa-payment" width="70" height="50" style="margin-right: 5px;">
-                                            <img src="{{asset('image/master.png')}}" alt="master-payment" width="70" height="50" style="margin-right: 5px;">
-                                            <img src="{{asset('image/paypal.png')}}" alt="paypal-payment" width="70" height="50" style="margin-right: 5px;">
+                                            <img src="{{asset('image/visa.png')}}" alt="visa-payment" width="70" height="70" style="margin-right: 5px;">
+                                            <img src="{{asset('image/master.png')}}" alt="master-payment" width="70" height="70" style="margin-right: 5px;">
+                                            <img src="{{asset('image/paypal.png')}}" alt="paypal-payment" width="70" height="70" style="margin-right: 5px;">
                                         </div>
+                                    </div> --}}
+                                    @if ($bocongthuong_link)
+                                        <div class="d-flex align-items-center mt-4 box-cert">
+                                            <a href="{{ $bocongthuong_link }}" class="himg mr-4 cert-img"
+                                                target="_blank" rel="nofollow noopener">
+                                                <img width="132" height="70"
+                                                    src="{{ asset('image/bocongthuong.webp') }}"
+                                                    data-lazy-srcset="{{ asset('image/bocongthuong.webp') }} 576w, {{ asset('image/bocongthuong.webp') }} 992w, {{ asset('image/bocongthuong.webp') }} 1440w"
+                                                    alt="Bộ công thương"
+                                                    data-lazy-src="{{ asset('image/bocongthuong.webp') }}"
+                                                    data-ll-status="loaded" class="entered lazyloaded"
+                                                    srcset="{{ asset('image/bocongthuong.webp') }} 576w, {{ asset('image/bocongthuong.webp') }} 992w, {{ asset('image/bocongthuong.webp') }} 1440w"><noscript><img
+                                                        width="132" height="70"
+                                                        src="{{ asset('image/bocongthuong.webp') }}"
+                                                        srcset="{{ asset('image/bocongthuong.webp') }} 576w, {{ asset('image/bocongthuong.webp') }} 992w, {{ asset('image/bocongthuong.webp') }} 1440w"
+                                                        alt="Bộ công thương"></noscript>
+                                            </a>
+                                        </div>
+                                    @endif
+                                    <div class="d-flex policy">
+                                        <a style="color:rgb(149, 149, 224) !important;" href="{{ route('privacy') }}"
+                                            rel="nofollow">
+                                            <span>Điều khoản sử dụng</span>
+                                        </a>
                                     </div>
+
                                 </div>
                             </div>
                         </div>
@@ -351,11 +270,13 @@
 
 
             </div>
-            <div class="footer__col" style="margin-left: 50px;">
+            <div class="footer__col"
+                style="display: flex; flex-direction: column; align-items: center; margin-left: 50px;">
                 <div class="footer-mobile-hidden">
                     <div class="footer__title">Kết nối với chúng tôi</div>
 
                     <div class="d-flex flex-wrap">
+                        {{-- <div class="d-flex flex-wrap" style="flex-direction: column; align-items: center;"> --}}
                         @if ($FACEBOOK)
                             <a target="_blank" href="{{ $FACEBOOK }}" class="footer__social"
                                 rel="nofollow noopener">
@@ -414,38 +335,38 @@
                             </a>
                         @endif
                     </div>
-                    <div class="footer__col non-view-mobile mt-5">
-                        @if ($bocongthuong_link)
-                        <div class="d-flex align-items-center mt-4 box-cert">
-                            <a href="{{$bocongthuong_link}}"
-                                class="himg mr-4 cert-img" target="_blank" rel="nofollow noopener">
-                                <img width="132" height="50"
-                                    src="{{ asset('image/bocongthuong.webp') }}"
-                                    data-lazy-srcset="{{ asset('image/bocongthuong.webp') }} 576w, {{ asset('image/bocongthuong.webp') }} 992w, {{ asset('image/bocongthuong.webp') }} 1440w"
-                                    alt="Bộ công thương"
-                                    data-lazy-src="{{ asset('image/bocongthuong.webp') }}"
-                                    data-ll-status="loaded" class="entered lazyloaded"
-                                    srcset="{{ asset('image/bocongthuong.webp') }} 576w, {{ asset('image/bocongthuong.webp') }} 992w, {{ asset('image/bocongthuong.webp') }} 1440w"><noscript><img
-                                        width="132" height="50"
-                                        src="{{ asset('image/bocongthuong.webp') }}"
-                                        srcset="{{ asset('image/bocongthuong.webp') }} 576w, {{ asset('image/bocongthuong.webp') }} 992w, {{ asset('image/bocongthuong.webp') }} 1440w"
-                                        alt="Bộ công thương"></noscript>
-                            </a>
-                        </div>
-                        @endif
-                        <div class="payment text-start mt-3">
+                    <div class="footer__col non-view-mobile" style="margin-top: 15px;">
+                        {{-- <div class="payment text-start mt-3">
                             <b>Chấp nhận thanh toán</b>
                             <div class="d-flex flex-wrap ">
-                                <img src="{{asset('image/visa.png')}}" alt="visa-payment" width="70" height="50" style="margin-right: 5px;">
-                                <img src="{{asset('image/master.png')}}" alt="master-payment" width="70" height="50" style="margin-right: 5px;">
-                                <img src="{{asset('image/paypal.png')}}" alt="paypal-payment" width="70" height="50" style="margin-right: 5px;">
+                                <img src="{{asset('image/visa.png')}}" alt="visa-payment" width="70" height="70" style="margin-right: 5px;">
+                                <img src="{{asset('image/master.png')}}" alt="master-payment" width="70" height="70" style="margin-right: 5px;">
+                                <img src="{{asset('image/paypal.png')}}" alt="paypal-payment" width="70" height="70" style="margin-right: 5px;">
                             </div>
+                        </div> --}}
+                        @if ($bocongthuong_link)
+                            <div class="d-flex align-items-center box-cert" style="margin-top: 10px; ">
+                                <a href="{{ $bocongthuong_link }}" class="himg mr-4 cert-img" target="_blank"
+                                    rel="nofollow noopener">
+                                    <img width="132" height="70" src="{{ asset('image/bocongthuong.webp') }}"
+                                        data-lazy-srcset="{{ asset('image/bocongthuong.webp') }} 576w, {{ asset('image/bocongthuong.webp') }} 992w, {{ asset('image/bocongthuong.webp') }} 1440w"
+                                        alt="Bộ công thương" data-lazy-src="{{ asset('image/bocongthuong.webp') }}"
+                                        data-ll-status="loaded" class="entered lazyloaded"
+                                        srcset="{{ asset('image/bocongthuong.webp') }} 576w, {{ asset('image/bocongthuong.webp') }} 992w, {{ asset('image/bocongthuong.webp') }} 1440w"><noscript><img
+                                            width="132" height="70"
+                                            src="{{ asset('image/bocongthuong.webp') }}"
+                                            srcset="{{ asset('image/bocongthuong.webp') }} 576w, {{ asset('image/bocongthuong.webp') }} 992w, {{ asset('image/bocongthuong.webp') }} 1440w"
+                                            alt="Bộ công thương"></noscript>
+                                </a>
+                            </div>
+                        @endif
+
+                        <div class="d-flex policy">
+                            <a style="color:rgb(149, 149, 224) !important;" href="{{ route('privacy') }}"
+                                rel="nofollow">
+                                <span>Điều khoản sử dụng</span>
+                            </a>
                         </div>
-                        {{-- <div class="d-flex policy" >
-                            <a style="color:rgb(149, 149, 224) !important;" href="https://mikotech.vn/chinh-sach/dieu-khoan-dich-vu/" rel="nofollow">
-            <span>Điều khoản sử dụng</span>
-          </a>
-            </div> --}}
                     </div>
                 </div>
                 {{-- <div class="footer__title">Dịch vụ
@@ -464,7 +385,7 @@
         <div class="footer__dkkd">
             <div class="footer__grid">
                 <div class="footer__col footer__col--2" style="padding-left: 5px;">
-                    <div class="" style="font-weight: 500;">{{ $companyNameValue }}</div>
+                    {{-- <div class="" style="font-weight: 500;">{{ $companyNameValue }}</div> --}}
                     <div class="bct" style="font-weight: 500;">{{ $DKKD }}</div>
                     {{-- <div class="bct">Trụ sở chính: {{ $ADDRESS }}</div> --}}
                     {{-- <div class="bct">Văn phòng : {{$VANPHONG}}</div>  --}}

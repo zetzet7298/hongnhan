@@ -8,7 +8,7 @@
 @endphp
 @extends('cms.layouts.master')
 
-@section('title', 'CMS Dịch vụ tư vấn pháp luật')
+@section('title', 'CMS Du Lịch Bình Hưng Với Hồng Nhàn')
 
 @section('content')
     <!-- ============================================================== -->
@@ -18,7 +18,7 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="header-title">Cấu hình tin tức</h4>
+                    <h4 class="header-title">Cấu hình bài viết</h4>
 
                     <div class="row mt-3">
                         <!--begin::Content-->
@@ -60,7 +60,8 @@
                                                 style="background-image: url({{ asset(theme()->getMediaUrlPath() . 'avatars/blank.png') }})">
                                                 <!--begin::Preview existing avatar-->
                                                 <div class="image-input-wrapper"
-                                                    style="background-image: url({{ display_image($banner) }});width:1230px; height:540px;"></div>
+                                                    style="background-image: url({{ display_image($banner) }});width:1230px; height:540px;">
+                                                </div>
                                                 <!--end::Preview existing avatar-->
 
                                                 <!--begin::Label-->

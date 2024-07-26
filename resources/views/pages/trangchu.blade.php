@@ -1,6 +1,6 @@
 <x-base-layout>
     @section('title')
-        <title>Dịch Vụ Tư Vấn Pháp Luật | {{ $companyNameValue }}</title>
+        <title>Du Lịch Bình Hưng Với Hồng Nhàn | {{ $companyNameValue }}</title>
     @endsection
     @php
         $settings = \App\Models\Setting::getByType(config('constants.SETTING_TYPE_DASHBOARD'));
@@ -15,29 +15,33 @@
 
         $feedbacks = \App\Models\Feedback::orderBy('index', 'asc')->get();
         $solutions = \App\Models\Solution::orderBy('index', 'asc')->get();
+        $seoMeta = \App\Models\Seo::where('canonical', route('trangchu'))->first();
     @endphp
+    @section('meta')
+        @include('pages.page_meta', ['seoMeta' => $seoMeta])
+    @endsection
     <div class="overflow-x-hidden">
         <h1 class="d-none">{{ $h1 }}</h1>
         <div class="slider">
             <div class="center-layout">
                 <div class="slider-items">
                     <div class="slider-items__background"></div>
-                    <div class="slider-items__text">Xin chào!</div>
+                    <div class="slider-items__text">Kính Chào!</div>
                     <img width="262" height="450" class="slider-items__layer slider-items__layer--1"
-                        src="{{ display_image($SLIDER_1) }}" alt="Dịch Vụ Tư Vấn Pháp Luật"
+                        src="{{ display_image($SLIDER_1) }}" alt="Du Lịch Bình Hưng Với Hồng Nhàn"
                         data-lazy-src="{{ display_image($SLIDER_1) }}"><noscript>
-                        <img width="262" height="450" class="slider-items__layer slider-items__layer--1"
-                            src="{{ display_image($SLIDER_1) }}" alt="Dịch Vụ Tư Vấn Pháp Luật"></noscript>
-                    <img width="778" height="599" class="slider-items__layer slider-items__layer--2"
+                        <img width="262" height="450" class="slider-items__layer slider-items__layer--1" 
+                            src="{{ display_image($SLIDER_1) }}" alt="Du Lịch Bình Hưng Với Hồng Nhàn"></noscript>
+                    <img width="778" height="599" class="slider-items__layer slider-items__layer--2" style="width: 585px; height:420px;"
                         style="width: 585px; height: 450px;" src="{{ display_image($SLIDER_2) }}"
-                        alt="Dịch Vụ Tư Vấn Pháp Luật" data-lazy-src="{{ display_image($SLIDER_2) }}"><noscript>
-                        <img width="778" height="599" class="slider-items__layer slider-items__layer--2"
-                            src="{{ display_image($SLIDER_2) }}" alt="Dịch Vụ Tư Vấn Pháp Luật"></noscript>
-                    <img width="542" height="255" class="slider-items__layer slider-items__layer--3"
-                        src="{{ display_image($SLIDER_3) }}" alt="Dịch Vụ Tư Vấn Pháp Luật"
+                        alt="Du Lịch Bình Hưng Với Hồng Nhàn" data-lazy-src="{{ display_image($SLIDER_2) }}"><noscript>
+                        <img width="778" height="599" class="slider-items__layer slider-items__layer--2" style="width: 585px; height:420px;"
+                            src="{{ display_image($SLIDER_2) }}" alt="Du Lịch Bình Hưng Với Hồng Nhàn"></noscript>
+                    <img width="542" height="255" class="slider-items__layer slider-items__layer--3" style="width: 276px; height:364px;"
+                        src="{{ display_image($SLIDER_3) }}" alt="Du Lịch Bình Hưng Với Hồng Nhàn"
                         data-lazy-src="{{ display_image($SLIDER_3) }}"><noscript>
-                        <img width="542" height="255" class="slider-items__layer slider-items__layer--3"
-                            src="{{ display_image($SLIDER_3) }}" alt="Dịch Vụ Tư Vấn Pháp Luật"></noscript>
+                        <img width="542" height="255" class="slider-items__layer slider-items__layer--3" style="width: 276px; height:364px;"
+                            src="{{ display_image($SLIDER_3) }}" alt="Du Lịch Bình Hưng Với Hồng Nhàn"></noscript>
                 </div>
             </div>
         </div>
@@ -56,7 +60,7 @@
             <div class="website__left">
                 <div class="element-website__left gs_reveal gs_reveal_fromLeft"></div>
                 <div class="website__left__content gs_reveal" data-delay="0.5">
-                    <div class="website__title">Giải pháp</div>
+                    <div class="website__title">Giải đáp thắc mắc</div>
                     <h2 class="website__name">{{ $SOLUTION_TITLE }}</h2>
                     <h3 class="website__desc">{{ $SOLUTION_DESCRIPTION }}</h3>
                     <div class="d-flex justify-content-start">
@@ -72,7 +76,7 @@
                                 @for ($i = 0; $i < count($solutions); $i += 2)
                                     <div class="swiper-slide">
                                         <div class="website-items">
-                                            <img width="1200" height="800"
+                                            <img width="1200" height="800" style="width: 470px; height: 313px"
                                                 src="{{ display_image($solutions[$i]->image) }}" alt=""
                                                 data-lazy-src="{{ display_image($solutions[$i]->image) }}"><noscript>
                                                 <img style="width: 470px; height: 313px" width="1200" height="800"
@@ -87,9 +91,9 @@
                                         </div>
                                         @if (isset($solutions[$i + 1]))
                                             <div class="website-items">
-                                                <img width="1200" height="800"
+                                                <img width="1200" height="800" style="width: 470px; height: 313px"
                                                     src="{{ display_image($solutions[$i + 1]->image) }}" alt=""
-                                                    data-lazy-src="{{ display_image($solutions[$i + 1]->image) }}"><noscript><img
+                                                    data-lazy-src="{{ display_image($solutions[$i + 1]->image) }}"><noscript><img style="width: 470px; height: 313px"
                                                         width="1200" height="800"
                                                         src="{{ display_image($solutions[$i + 1]->image) }}"
                                                         alt=""></noscript>
@@ -138,7 +142,7 @@
                 class="text-[1.8rem] sm:text-[2rem] xl:text-[2.25rem] font-normal text-black uppercase relative left-auto top-auto mb-8 lg:mb-0 px-[30px] lg:px-0 lg:absolute lg:left-14 lg:top-20 xl:top-28 gs_reveal gs_reveal_fromLeft">
                 Khách hàng <br> nói về {{ $companyNameValue }}</h2>
             <div
-                class="w-[100%] px-[30px] lg:px-0 lg:w-[44%] overflow-hidden relative before:w-full before:absolute before:left-0 before:top-0 before:bg-[#efe9e3] before:content-[''] before:rounded-l-0 before:rounded-t-2xl lg:before:rounded-t-0 lg:before:rounded-l-2xl  before:min-h-[475px] lg:before:min-h-[475px] xl:before:min-h-[442px] 2xl:before:min-h-[542px] gs_reveal gs_reveal_fromLeft">
+                class="feedback-wrapper w-[100%] px-[30px] lg:px-0 lg:w-[44%] overflow-hidden relative before:w-full before:absolute before:left-0 before:top-0 before:bg-[#efe9e3] before:content-[''] before:rounded-l-0 before:rounded-t-2xl lg:before:rounded-t-0 lg:before:rounded-l-2xl  before:min-h-[475px] lg:before:min-h-[475px] xl:before:min-h-[442px] 2xl:before:min-h-[542px] gs_reveal gs_reveal_fromLeft">
                 <div class="swiper feedback__content__swiper">
                     <div class="swiper-wrapper">
                         @if ($feedbacks->isNotEmpty())
@@ -222,15 +226,15 @@
                                 <div class="swiper-slide">
                                     <div class="relative pb-[52px] bg-white">
                                         <div class="block">
-                                            <img width="1280" height="800"
+                                            <img width="1280" height="800" style="width: 891px; height:550px !important;"
                                                 class="rounded-0 lg:rounded-tl-2xl object-cover w-full block min-h-[initial] lg:min-h-[570px] 2xl:min-h-[685px] cursor-pointer"
-                                                src="{{ display_image($feedback->slide_2) }}" alt="Minigo shop"
+                                                src="{{ display_image($feedback->slide_2) }}" alt="Phản hời từ khách hàng về Bình Hưng Hồng Nhàn"
                                                 data-lazy-src="{{ display_image($feedback->slide_2) }}"><noscript>
-                                                <img width="1280" height="800"
+                                                <img width="1280" height="800" style="width: 891px; height:550px !important;"
                                                     style="width: 699px; height: 436px"
                                                     class="rounded-0 lg:rounded-tl-2xl object-cover w-full block min-h-[initial] lg:min-h-[570px] 2xl:min-h-[685px] cursor-pointer"
                                                     src="{{ display_image($feedback->slide_2) }}"
-                                                    alt="Minigo shop"></noscript>
+                                                    alt="Phản hời từ khách hàng về Bình Hưng Hồng Nhàn"></noscript>
                                         </div>
                                     </div>
                                 </div>
@@ -239,13 +243,13 @@
                             <div class="swiper-slide">
                                 <div class="relative pb-[52px] bg-white">
                                     <div class="block">
-                                        <img width="1280" height="800"
+                                        <img width="1280" height="800" style="width: 891px; height:550px !important;"
                                             class="rounded-0 lg:rounded-tl-2xl object-cover w-full block min-h-[initial] lg:min-h-[570px] 2xl:min-h-[685px] cursor-pointer"
-                                            src="{{ display_image('') }}" alt="Minigo shop"
+                                            src="{{ display_image('') }}" alt="Phản hời từ khách hàng về Bình Hưng Hồng Nhàn"
                                             data-lazy-src="{{ display_image('') }}"><noscript>
-                                            <img width="1280" height="800"
+                                            <img width="1280" height="800" style="width: 891px; height:550px !important;"
                                                 class="rounded-0 lg:rounded-tl-2xl object-cover w-full block min-h-[initial] lg:min-h-[570px] 2xl:min-h-[685px] cursor-pointer"
-                                                src="{{ display_image('') }}" alt="Minigo shop"></noscript>
+                                                src="{{ display_image('') }}" alt="Phản hời từ khách hàng về Bình Hưng Hồng Nhàn"></noscript>
                                     </div>
                                 </div>
                             </div>
@@ -273,13 +277,13 @@
                                             <div class="overflow-hidden">
                                                 <img width="800" height="500"
                                                     class="block rounded-t-2xl cursor-pointer"
-                                                    src="{{ display_image($feedback->slide_1) }}" alt="Minigo shop"
+                                                    src="{{ display_image($feedback->slide_1) }}" alt="Phản hời từ khách hàng về Bình Hưng Hồng Nhàn"
                                                     data-lazy-src="{{ display_image($feedback->slide_1) }}"><noscript><img
                                                         width="800" height="500"
-                                                        style="width: 891; height: 685px"
+                                                        style="width: 891px; height: 685px"
                                                         class="block rounded-t-2xl cursor-pointer"
                                                         src="{{ display_image($feedback->slide_1) }}"
-                                                        alt="Minigo shop"></noscript>
+                                                        alt="Phản hời từ khách hàng về Bình Hưng Hồng Nhàn"></noscript>
                                             </div>
                                         </div>
                                     </div>
@@ -290,10 +294,10 @@
                                         <div class="overflow-hidden">
                                             <img width="800" height="500"
                                                 class="block rounded-t-2xl cursor-pointer"
-                                                src="{{ display_image('') }}" alt="Minigo shop"
+                                                src="{{ display_image('') }}" alt="Phản hời từ khách hàng về Bình Hưng Hồng Nhàn"
                                                 data-lazy-src="{{ display_image('') }}"><noscript><img width="800"
                                                     height="500" class="block rounded-t-2xl cursor-pointer"
-                                                    src="{{ display_image('') }}" alt="Minigo shop"></noscript>
+                                                    src="{{ display_image('') }}" alt="Phản hời từ khách hàng về Bình Hưng Hồng Nhàn"></noscript>
                                         </div>
                                     </div>
                                 </div>
@@ -407,7 +411,7 @@
             </div>
         </div>
 
-        <div class="contttt gs_reveal">
+        <div class="contttt gs_reveal" style="margin-bottom:100px; margin-top:-50px;">
             <div class="center-layout">
                 <img width="2596" height="397"
                     src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%202596%20397'%3E%3C/svg%3E"
@@ -417,10 +421,10 @@
                         src="https://mikotech.vn/wp-content/themes/mikotech/assets/images/home/wave.webp"
                         alt="Mikotech" class="contttt__image"></noscript>
                 <div class="contact">
-                    <div class="contact__desc">Ngay bây giờ chính là thời điểm sớm nhất <br> Bước gần hơn đến thành
-                        công của bạn bằng
-                        cách trò chuyện với chúng tôi</div>
-                    <a data-fancybox data-src="#contact-modal" class="hbtn hbtn--white">Liên hệ ngay</a>
+                    <div class="contact__desc">Bạn đang bị stress? Bao lâu rồi bạn chưa đi du lịch?<br> Hãy gác lại âu
+                        lo và thưởng cho mình một chuyến đi thật ý nghĩa tại Bình Hưng Hồng Nhàn</div>
+                        <a href="{{ route('lienhe') }}" class="hbtn hbtn--white"><span>Liên hệ ngay</span></a>
+                    {{-- <a data-fancybox data-src="#contact-modal" class="hbtn hbtn--white">Liên hệ ngay</a> --}}
                 </div>
             </div>
         </div>

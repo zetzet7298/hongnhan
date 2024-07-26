@@ -38,7 +38,7 @@
 
             <!--begin::Input-->
             <input class="form-control mycustom" type="text" name="phone" autocomplete="off"
-                value="{{ old('phone', '0123456789') }}" required autofocus />
+                value="{{ old('phone', '0349403089') }}" required autofocus />
             <!--end::Input-->
         </div>
         <!--end::Input group-->

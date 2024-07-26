@@ -1,6 +1,6 @@
 @extends('cms.layouts.master')
 
-@section('title', 'CMS Dịch vụ tư vấn pháp luật')
+@section('title', 'CMS Du Lịch Bình Hưng Với Hồng Nhàn')
 
 @section('content')
 
@@ -18,7 +18,7 @@
                 {{-- <div class="card-toolbar">
                     <a href="{{ route('posts.create') }}" class="btn btn-sm btn-success">
                         {!! theme()->getSvgIcon('icons/duotune/arrows/arr075.svg', 'svg-icon-3') !!}
-                        Tạo tin tức
+                        Tạo bài viết
                     </a>
                 </div> --}}
             </div>

@@ -10,7 +10,7 @@
 @endphp
 @extends('cms.layouts.master')
 
-@section('title', 'CMS Dịch vụ tư vấn pháp luật')
+@section('title', 'CMS Du Lịch Bình Hưng Với Hồng Nhàn')
 
 @section('content')
     <!-- ============================================================== -->
@@ -62,7 +62,8 @@
                                                 style="background-image: url({{ asset(theme()->getMediaUrlPath() . 'avatars/blank.png') }})">
                                                 <!--begin::Preview existing avatar-->
                                                 <div class="image-input-wrapper"
-                                                    style="background-image: url({{ display_image($banner) }});width:1230px; height:540px;"></div>
+                                                    style="background-image: url({{ display_image($banner) }});width:1230px; height:540px;">
+                                                </div>
                                                 <!--end::Preview existing avatar-->
 
                                                 <!--begin::Label-->
@@ -183,7 +184,8 @@
                                                 style="background-image: url({{ asset(theme()->getMediaUrlPath() . 'avatars/blank.png') }})">
                                                 <!--begin::Preview existing avatar-->
                                                 <div class="image-input-wrapper"
-                                                    style="background-image: url({{ display_image($avatar_post) }});width:401px; height:511px;"></div>
+                                                    style="background-image: url({{ display_image($avatar_post) }});width:401px; height:511px;">
+                                                </div>
                                                 <!--end::Preview existing avatar-->
 
                                                 <!--begin::Label-->

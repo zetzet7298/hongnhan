@@ -35,8 +35,11 @@
         $diemdadang_item_2 = $settings['diemdadang_item_2']['value'];
         $diemdadang_item_3 = $settings['diemdadang_item_3']['value'];
         $diemdadang_item_4 = $settings['diemdadang_item_4']['value'];
-
+        $seoMeta = \App\Models\Seo::where('canonical', route('gioithieu'))->first();
     @endphp
+    @section('meta')
+        @include('pages.page_meta', ['seoMeta' => $seoMeta])
+    @endsection
     <div class="hero">
         <h1 class="d-none">{{ $h1 }}</h1>
         <div class="center-layout">
@@ -171,9 +174,10 @@
                         <div class="swiper-slide">
                             <div class="overflow-hidden relative rounded-2xl">
                                 <video id="video-ads" width="809" height="455" height="auto" controls>
-                                    <source src="{{ display_video($video) }}" type="video/mp4">
+                                    <source src="{{ asset('uploads/binhhunghongnhan.mp4') }}" type="video/mp4">
                                 </video>
                                 <img id="video-thumbnail"
+                                style="width: 95%;"
                                     class="v-control absolute left-0 top-0 w-full z-10 rounded-2xl" width="537"
                                     height="537" src="{{ display_image($video_avatar) }}" alt="icon">
 
@@ -201,7 +205,7 @@
     <div class="about-group-5">
         <div class="center-layout-2">
             <div class="about-group-5__left">
-                <h2 class="about-group-5__name" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+                <h2 class="team-box-6__name" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
                     {{ $chienloipham_title }}</h2>
                 <h3 class="about-group-5__desc" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
                     {{ $chienloipham_description }}</h3>
@@ -221,12 +225,12 @@
     <div class="about-group-6">
         <div class="about-group-6-img">
             <div class="himg banner--desktop">
-                <img width="1900" height="1135" src="{{ display_image($diemdadang_banner) }}"
+                <img width="1900" height="1135" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201900%201135'%3E%3C/svg%3E"
                     data-lazy-src="{{ display_image($diemdadang_banner) }}"><noscript><img width="1900"
                         height="1135" src="{{ display_image($diemdadang_banner) }}"></noscript>
             </div>
             <div class="himg banner--mobile">
-                <img width="375" height="812" class="gs_reveal" src="{{ display_image($diemdadang_banner) }}"
+                <img width="375" height="812" class="gs_reveal" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201900%201135'%3E%3C/svg%3E"
                     alt="banner" data-lazy-src="{{ display_image($diemdadang_banner) }}"><noscript><img
                         width="375" height="812" class="gs_reveal"
                         src="{{ display_image($diemdadang_banner) }}" alt="banner"></noscript>
@@ -235,8 +239,10 @@
         <div class="about-group-6__content">
             <div class="center-layout-2">
                 <div class="about-group-6__main">
-                    <h2 class="about-group-6__title" data-aos="fade-up" data-aos-duration="1000"
-                        data-aos-once="true"><span>{{ $diemdadang_title }}</span></h2>
+                    <h2 class="team-box-6__name" data-aos="fade-up" data-aos-duration="1000"
+                        data-aos-once="true">
+                        {{ $diemdadang_title }}
+                    </h2>
                     <div class="about-group-6-items" data-aos="fade-up" data-aos-duration="1000"
                         data-aos-once="true">{{ $diemdadang_item_1 }}</div>
                     <div class="about-group-6-items" data-aos="fade-up" data-aos-duration="1000"
@@ -248,13 +254,12 @@
                 </div>
             </div>
         </div>
-        <div class="contttt" style="position: absolute; left: 0; bottom: -5rem; width: 100%;">
+        <div class="contttt" style="position: absolute; left: 0; width: 100%;">
             <div class="center-layout">
                 <div class="contact" style="margin: 0;">
-                    <div class="contact__desc">Ngay bây giờ chính là thời điểm sớm nhất <br> Bước gần hơn đến thành
-                        công của bạn
-                        bằng
-                        cách trò chuyện với chúng tôi</div>
+                    <div class="contact__desc">Bạn đang muốn được tư vấn chi tiết hơn?<br>
+Hãy liên hệ ngay chúng tôi, chúng tôi sẽ hỗ trợ bạn một cách nhanh chóng</div>
+{{-- <a target="_blank" rel="nofollow noopener" href="{{$ZALO}}" class="hbtn hbtn--white">Liên hệ ngay</a> --}}
                     <a href="{{ route('lienhe') }}" class="hbtn hbtn--white"><span>Liên hệ ngay</span></a>
                 </div>
             </div>

@@ -1,6 +1,6 @@
 @extends('cms.layouts.master')
 
-@section('title', 'CMS Dịch vụ tư vấn pháp luật')
+@section('title', 'CMS Du Lịch Bình Hưng Với Hồng Nhàn')
 @section('styles')
     <link href="{{ asset('hyper/vendor/select2/css/select2.min.css') }}" rel="stylesheet" type="text/css" />
 @endsection
@@ -46,7 +46,7 @@
                         <!--end::Input group-->
 
                         <!--begin::Input group-->
-                        {{-- @if(!isset($item)) --}}
+                        {{-- @if (!isset($item)) --}}
                         <div class="row mt-3">
                             <!--begin::Label-->
                             <label class="form-label">{{ __('Email') }}</label>
@@ -64,7 +64,8 @@
                         <!--begin::Input group-->
                         <div class="row mt-3">
                             <!--begin::Label-->
-                            <label class="form-label">{{ __('Mật khẩu mới (Bỏ qua input này nếu không muốn đổi mật khẩu)') }}</label>
+                            <label
+                                class="form-label">{{ __('Mật khẩu mới (Bỏ qua input này nếu không muốn đổi mật khẩu)') }}</label>
                             <!--end::Label-->
 
                             <div class="input-group input-group-merge">
@@ -114,6 +115,5 @@
             $(document).ready(function() {
                 $('.select2').select2();
             });
-            
         </script>
     @endsection

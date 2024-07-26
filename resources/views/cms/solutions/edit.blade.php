@@ -1,6 +1,6 @@
 @extends('cms.layouts.master')
 
-@section('title', 'CMS Dịch vụ tư vấn pháp luật')
+@section('title', 'CMS Du Lịch Bình Hưng Với Hồng Nhàn')
 
 @section('content')<div class="content flex-row-fluid" id="kt_content">
         <div class="card">
@@ -51,7 +51,8 @@
                                     style="background-image: url({{ display_image($solution->image) }})">
                                     <!--begin::Preview existing avatar-->
                                     <div class="image-input-wrapper"
-                                        style="background-image: url({{ display_image($solution->image) }});width:470px; height:313px;"></div>
+                                        style="background-image: url({{ display_image($solution->image) }});width:470px; height:313px;">
+                                    </div>
                                     <!--end::Preview existing avatar-->
 
                                     <!--begin::Label-->

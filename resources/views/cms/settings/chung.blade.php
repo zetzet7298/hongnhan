@@ -13,7 +13,7 @@
 @endphp
 @extends('cms.layouts.master')
 
-@section('title', 'CMS Dịch vụ tư vấn pháp luật')
+@section('title', 'CMS Du Lịch Bình Hưng Với Hồng Nhàn')
 
 @section('content')
     <!-- ============================================================== -->
@@ -90,6 +90,20 @@
                                             <!--begin::Hint-->
                                             <div class="form-text">Allowed file types: png, jpg, jpeg.</div>
                                             <!--end::Hint-->
+                                        </div>
+                                        <!--end::Col-->
+                                    </div>
+                                    <!--end::Input group-->
+                                    <!--begin::Input group-->
+                                    <div class="mb-3">
+                                        <!--begin::Label-->
+                                        <label for="example-textarea" class="form-label">{{ __('Loading Text') }}</label>
+                                        <!--end::Label-->
+
+                                        <!--begin::Col-->
+                                        <div class="col-lg-12 fv-row">
+                                            <textarea rows="1" type="text" name="loadingText" class="form-control" id="example-textarea">
+{{ old('loadingText', $loadingText ?? '') }}</textarea>
                                         </div>
                                         <!--end::Col-->
                                     </div>

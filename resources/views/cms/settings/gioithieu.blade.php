@@ -35,7 +35,7 @@
 @endphp
 @extends('cms.layouts.master')
 
-@section('title', 'CMS Dịch vụ tư vấn pháp luật')
+@section('title', 'CMS Du Lịch Bình Hưng Với Hồng Nhàn')
 
 @section('content')
     <!-- ============================================================== -->
@@ -58,7 +58,7 @@
 
                                 <!--begin::Card body-->
                                 <div class="card-body border-top p-9">
-<!--begin::Input group-->
+                                    <!--begin::Input group-->
                                     <!--begin::Input group-->
                                     <div class="row mt-3">
                                         <!--begin::Label-->
@@ -718,7 +718,7 @@
                                         <!--begin::Col-->
                                         <div class="col-lg-12 fv-row">
                                             <textarea rows="5" type="text" name="diemdadang_title" class="form-control" id="example-textarea"
-                                                placeholder="" value="">{{ old('diemdadang_title', $chienloipham_description ?? '') }}</textarea>
+                                                placeholder="" value="">{{ old('diemdadang_title', $diemdadang_title ?? '') }}</textarea>
                                         </div>
                                         <!--end::Col-->
                                     </div>

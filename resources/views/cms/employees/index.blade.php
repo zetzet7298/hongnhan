@@ -1,6 +1,6 @@
 @extends('cms.layouts.master')
 
-@section('title', 'CMS Dịch vụ tư vấn pháp luật')
+@section('title', 'CMS Du Lịch Bình Hưng Với Hồng Nhàn')
 
 @section('content')
     <!--begin::Col-->
@@ -57,7 +57,8 @@
                                             </div>
                                             <div class="d-flex justify-content-start flex-column">
                                                 <a href="#"
-                                                    class="text-dark fw-bolder text-hover-primary fs-6">{{ $row->first_name }}</a>
+                                                    class="text-dark fw-bolder text-hover-primary fs-6">{{ $row->prefix_name }}
+                                                    {{ $row->first_name }}</a>
                                                 <span class="text-muted fw-bold text-muted d-block fs-7">
                                                     @foreach ($row->specialties as $specialty)
                                                         {{ $specialty->name }},
@@ -90,20 +91,20 @@
                                             <a target="_blank" href="{{ route('employees.show', $row->id) }}"
                                                 href="javascript:void(0);" class="action-icon"> <i
                                                     class="mdi mdi-eye"></i></a>
-                                                    @if (checkPermission('employee', 'PUT'))
-                                                    <a href="{{ route('employees.edit', ['employee' => $row->id]) }}"
-                                                        href="javascript:void(0);" class="action-icon"> <i
-                                                            class="mdi mdi-square-edit-outline"></i></a>
-                                                    @endif
-                                                    @if (checkPermission('employee', 'DELETE'))
-                                                    <button type="submit"
+                                            @if (checkPermission('employee', 'PUT'))
+                                                <a href="{{ route('employees.edit', ['employee' => $row->id]) }}"
+                                                    href="javascript:void(0);" class="action-icon"> <i
+                                                        class="mdi mdi-square-edit-outline"></i></a>
+                                            @endif
+                                            @if (checkPermission('employee', 'DELETE'))
+                                                <button type="submit"
                                                     class="btn action-icon btn-icon btn-bg-light btn-active-color-primary btn-sm mb-1"
                                                     onclick="return confirm('Bạn chắc chắn muốn xóa?');">
                                                     <i class="mdi mdi-delete"></i>
                                                 </button>
-                                                    @endif
-                                          
-                                          
+                                            @endif
+
+
                                         </form>
                                     </td>
 

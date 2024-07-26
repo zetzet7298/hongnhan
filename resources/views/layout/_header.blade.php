@@ -1,5 +1,25 @@
 <div class="loading-icon">
-
+    <div class="design-banner-info" style="z-index:99999;width: 100% !important;
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;">
+        <div class="design-banner-description"
+        style="                    display: flex;
+        justify-content: center;
+        align-items: center;"
+        >
+            <div style="      margin: 0;
+            /* background: rgba(0, 0, 0, 0.5); */
+            color: #fff;
+            border-radius: 10px;
+            font-weight:bolder;
+            font-size:60px;
+            text-align:center;
+            ">{{$loadingText}}</div>
+        </div>
+    </div>
   </div>
 
   {{-- <svg id="Layer_1" width="300" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 828.64 125.09">
@@ -48,11 +68,11 @@
                 <img width="240" style="margin-left:5px;height:46px;" src="{{ display_image($LOGO) }}" alt=""
                     data-lazy-src="{{ display_image($LOGO) }}">
             </a>
-            <div class="header__right ">
+            <div class="header__right" style="justify-content: end">
                 <div class="header__nav_container">
-                    <ul id="menu-menu-chinh" class="header__nav">
+                    <ul id="menu-menu-chinh" class="header__nav" style="margin-right: 100px;">
                         <li id="menu-item-385"
-                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home @currentMenuItem('trangchu')"">
+                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home @currentMenuItem('trangchu')">
                             <a href="{{ route('trangchu') }}" aria-current="page">Trang chủ</a>
                         </li>
                         <li id="menu-item-391"
@@ -68,14 +88,14 @@
                                         href="https://mikotech.vn/thiet-ke-website/">Thiết kế Website</a></li>
                             </ul> --}}
                         </li>
-                        <li id="menu-item-1658"
+                        {{-- <li id="menu-item-1658"
                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1658 @currentMenuItem('tuyendung')">
                             <a href="{{ route('tuyendung') }}">Tuyển dụng</a>
                         </li>
                         <li id="menu-item-390"
                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-390 @currentMenuItem('nhansu')">
                             <a href="{{ route('nhansu') }}">Nhân sự</a>
-                        </li>
+                        </li> --}}
                         <li id="menu-item-392"
                             class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-392 @currentMenuItem('tintuc')">
                             <a href="{{ route('tintuc') }}">Bài viết</a>
@@ -93,7 +113,7 @@
                             </ul> --}}
                         </li>
                     </ul>
-                </div> <a class="effect-link header__button " href="{{ route('lienhe') }}">Liên hệ</a>
+                </div> <a class="effect-link header__button " href="{{ route('lienhe') }}" style="color: #fff">Liên hệ</a>
             </div>
         </div>
     </div>
@@ -105,7 +125,7 @@
     <div class="hmmenu">
         <div class="hmmenu__header">
             <a href="{{ route('trangchu') }}" class="himg hmmenu__logo">
-                <img width="180" style="margin-left:5px;height:27.23px;" src="{{ display_image($LOGO) }}"
+                <img width="240" style="margin-left:5px;height:46px;" src="{{ display_image($LOGO) }}"
                     alt="" data-lazy-src="{{ display_image($LOGO) }}">
             </a>
         </div>
@@ -126,10 +146,10 @@
                                     href="">Thiết kế Website</a></li>
                         </ul> --}}
                     </li>
-                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1658"><a
+                    {{-- <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1658"><a
                             href="{{ route('tuyendung') }}">Tuyển dụng</a></li>
                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-390"><a
-                            href="{{ route('nhansu') }}">Nhân sự</a></li>
+                            href="{{ route('nhansu') }}">Nhân sự</a></li> --}}
                     <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-392">
                         {{-- class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-392"> --}}
                         <a href="{{ route('tintuc') }}">Bài viết</a>
