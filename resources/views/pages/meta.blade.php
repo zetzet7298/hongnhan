@@ -4,7 +4,7 @@
 <meta name="format-detection" content="telephone=no,date=no,address=no,email=no,url=no" >
 <meta name="robots" content="{{ $seoMeta->meta_robots ?? 'index, follow' }}">
 <link rel="canonical" href="{{ $seoMeta->canonical ?? '' }}">
-<link rel="alternate" hreflang="vi" href="{{ $seoMeta->alternate_hreflang ?? '' }}" >
+{{-- <link rel="alternate" hreflang="vi" href="{{ $seoMeta->alternate_hreflang ?? '' }}" > --}}
 <meta name="description" content="{{ $seoMeta->meta_description ?? '' }}">
 <meta name="keywords" content="{{ $seoMeta->meta_keywords ?? '' }}"> 
 <title>{{ $seoMeta->meta_title ?? '' }}</title>     
@@ -23,9 +23,9 @@
 <meta property="og:image:type" content="{{ $seoMeta->og_image_type ?? 'image/jpeg' }}">
 
 <!-- Twitter -->
-<meta name="twitter:card" content="{{ $seoMeta->twitter_card ?? 'summary' }}">
+{{-- <meta name="twitter:card" content="{{ $seoMeta->twitter_card ?? 'summary' }}">
 <meta name="twitter:site" content="{{ $seoMeta->twitter_site ?? '' }}">
 <meta name="twitter:title" content="{{ $seoMeta->twitter_title ?? '' }}">
 <meta name="twitter:description" content="{{ $seoMeta->twitter_description ?? '' }}">
 <meta name="twitter:image" content="{{ $seoMeta->twitter_image ?? '' }}">
-<meta name="twitter:creator" content="{{ $seoMeta->twitter_creator ?? '' }}">
+<meta name="twitter:creator" content="{{ $seoMeta->twitter_creator ?? '' }}"> --}}
