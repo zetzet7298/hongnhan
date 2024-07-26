@@ -226,6 +226,7 @@
         <div class="about-group-6-img">
             <div class="himg banner--desktop">
                 <img width="1900" height="1135" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201900%201135'%3E%3C/svg%3E"
+                alt="banner"
                     data-lazy-src="{{ display_image($diemdadang_banner) }}"><noscript><img width="1900"
                         height="1135" src="{{ display_image($diemdadang_banner) }}"></noscript>
             </div>
