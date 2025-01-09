@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /privacy-policy
+Disallow: /assets/
+Sitemap: http://tech.local:3333/sitemap.xml
